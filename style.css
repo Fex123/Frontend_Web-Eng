@@ -1,0 +1,17 @@
+:root{
+    --primary-color: #127cdf;
+    --secondary-color: #06e424;
+    --hover-color: #2f9706;
+    --background-color: #afaaaa;
+    --text-color: #000000;
+
+}
+#navigationbar{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+   
+}
+#footer{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
