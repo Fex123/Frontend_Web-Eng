@@ -56,7 +56,7 @@ class StudyClass {
     }
 }
 const lecturer = [];
-document.getElementById("lecturers_addButton").addEventListener("click", addLecturer);
+document.getElementById("lecturers_addButton").addEventListener("click", addLecturer());
 function addLecturer(){
     const firstName=document.getElementById("firstName").value;
     const lastName=document.getElementById("lastName").value;
@@ -65,6 +65,15 @@ function addLecturer(){
     lecturer.push(new Lecturer(lecturer.length,firstName,lastName,lectures,email,null)) 
     alert(lecturer.length)
     localStorage.setItem("Test",JSON.stringify(lecturer))
+}
+document.getElementById("lecturers_editButton").addEventListener("click", addLecturer(id));
+function updateLecturer(id){
+  const firstName=document.getElementById("firstName").value;
+  const lastName=document.getElementById("lastName").value;
+  const lectures=document.getElementById("lectures").value;
+  const email=document.getElementById("email").value;
+  lecturer[id]=new Lecturer(id,firstName,lastName,lectures,email,null);
+  localStorage.setItem("Test",JSON.stringify(lecturer))
 }
 
 document.getElementById("lecturers_changeButton").addEventListener("click", updateLecturer);
