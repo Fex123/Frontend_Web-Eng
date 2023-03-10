@@ -64,12 +64,14 @@ function addLecturer(){
     const email=document.getElementById("email").value;
     lecturer.push(new Lecturer(lecturer.length,firstName,lastName,lectures,email,null)) 
     alert(lecturer.length)
+    localStorage.setItem("Test",JSON.stringify(lecturer))
 }
 
 document.getElementById("lecturers_changeButton").addEventListener("click", updateLecturer);
 //updateLecturer(){
     //
 //}
+
 export function getLecturer(){
     return lecturer;
 }

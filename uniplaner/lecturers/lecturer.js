@@ -1,4 +1,7 @@
-import * as script from "../../script.js"
+
+let test = JSON.parse(localStorage.getItem("Test"))
+
+alert(test[0].firstName);
 
 window.addEventListener("load", function(){
     alert("Hallo");
