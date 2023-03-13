@@ -1,10 +1,4 @@
-:root {
-    --primary-color: #ff8000;
-    --secondary-color: #b35a00;
-    --hover-color: #ffdfbf;
-    --background-color: #afaaaa;
-    --text-color: #000000;
-}
+/* 
 
 #navigationbar {
     background-color: var(--primary-color);
@@ -15,6 +9,8 @@
 }
 
 .container{
+    max-width: -webkit-fill-available;
+    height: 80px;
     padding: 0;
     margin-left: 10%;
     margin-right: 10%;
@@ -28,6 +24,7 @@
 
 .navbar-nav{
     padding-right: 25px;
+    justify-content: center;
 }
 
 .nav>div:last-child{
@@ -35,6 +32,9 @@
 }
 
 .navbar-brand{
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
     padding: 0;
 }
 
@@ -45,17 +45,17 @@
 }
 
 /* überall links und recht eingerückt */
-section{
+section {
     margin-left: 10%;
     margin-right: 10%;
 }
 
 
 /* Carousel auf die ganze Bildschirmbreite setzen */
-#carousel{
+#carousel {
     margin-left: 0%;
     margin-right: 0%;
-} 
+}
 
 /* Höhe des Carousel-Elements festlegen: 70% des sichtbaren Bereichs */
 .item {
@@ -81,7 +81,7 @@ section{
 }
 
 /* Carouselpunkte mittig */
-.carousel-indicators{
+.carousel-indicators {
     width: 100vw;
     margin-left: 0px !important;
     margin-right: 0px !important;
@@ -95,18 +95,19 @@ section{
     color: var(--text-color);
 }
 
-.container.footer{
+.container.footer {
     padding-top: 25px;
 }
 
-.footer-headline{
+.footer-headline {
     font-size: calc(1.3rem + .6vw) !important;
     font-weight: 250 !important;
 }
 
-.footer-item{
+.footer-item {
     font-size: calc((1.3rem + .6vw) * 0.75);
     font-weight: 250 !important;
 }
 
 
+*/

@@ -5,37 +5,8 @@ class StudyProgram {
         this.name = name;
     }
 }
-class StudyProgramModel {
-    constructor() {}
-    addStudyProgramWithId(studyProgram, id) {
 
-    }
-    getStudyPrograms() {
-        return getData("studyPrograms");
-    }
-    addStudyProgram(studyProgram) {
-        setData("studyPrograms", studyProgram);
-    }
-    editStudyProgram(newStudyProgram) {
-        setData("studyPrograms", newStudyProgram);
-    }
-    findStudyProgram(id) {
-        for (let studyProgram of getData("studyPrograms")) {
-            if (studyProgram.id === id) {
-                return studyProgram;
-            }
-        }
-    }
-    deleteStudyProgram(id) {
-        const newStudyPrograms = [];
-        for (let studyProgram of getData("studyPrograms")) {
-            if (studyProgram.id !== id) {
-                newStudyPrograms.push(studyProgram);
-            }
-        }
-        setData("studyPrograms", newStudyPrograms)
-    }
-}
+const studyProgramModel = new StudyProgramModel();
 
 function loadList() {
 
@@ -78,7 +49,6 @@ function loadList() {
     document.getElementById("list_table").innerHTML = HTML;
 }
 
-const studyProgramModel = new StudyProgramModel();
 window.addEventListener("load", function () {
 
     loadList();
@@ -86,6 +56,7 @@ window.addEventListener("load", function () {
 });
 
 function addStudyProgramHTML() {
+    const studyprogramlistTemplate = document.createElement("template");
     studyprogramlistTemplate.innerHTML = `    
     <div class="contentwrapper d-flex flex-column">
     <div class="section-title">

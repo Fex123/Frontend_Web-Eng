@@ -1,4 +1,5 @@
 /*class StudyProgramModel {
+
     constructor() {
         this.database = new Database();
         this.studyPrograms = this.database.getData("studyPrograms")
