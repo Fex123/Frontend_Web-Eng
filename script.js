@@ -56,17 +56,17 @@ class StudyClass {
     }
 }
 const lecturer = [];
-document.getElementById("lecturers_addButton").addEventListener("click", addLecturer());
+//document.getElementById("lecturers_addButton").addEventListener("dblclick", addLecturer());
 function addLecturer(){
+  
     const firstName=document.getElementById("firstName").value;
     const lastName=document.getElementById("lastName").value;
     const lectures=document.getElementById("lectures").value;
     const email=document.getElementById("email").value;
     lecturer.push(new Lecturer(lecturer.length,firstName,lastName,lectures,email,null)) 
-    alert(lecturer.length)
     localStorage.setItem("Test",JSON.stringify(lecturer))
 }
-document.getElementById("lecturers_editButton").addEventListener("click", addLecturer(id));
+/*document.getElementById("lecturers_editButton").addEventListener("click", editLecturer(id));
 function updateLecturer(id){
   const firstName=document.getElementById("firstName").value;
   const lastName=document.getElementById("lastName").value;
@@ -85,3 +85,29 @@ export function getLecturer(){
     return lecturer;
 }
 
+/*let myArray = localStorage.getItem("Test");
+alert("Test")
+let myList = document.getElementById("myList");
+
+for (let i = 0; i < myArray.length; i++) {
+  let listItem = document.createElement("li");
+  listItem.textContent = myArray[i];
+  myList.appendChild(listItem);
+}*/
+if(document.URL === "http://127.0.0.1:5501/uniplaner/lecturer.html"){
+let myArray = JSON.parse(localStorage.getItem("Test"));
+
+let myTable = document.getElementById("myTable");
+alert(myArray);
+
+for (let i = 0; i < myArray.length; i++) {
+  let row = document.createElement("tr");
+
+  for (let j = 0; j < myArray[i].length; j++) {
+    let cell = document.createElement("td");
+    cell.textContent = myArray[i][j];
+    row.appendChild(cell);
+  }
+
+  myTable.appendChild(row);
+}}
